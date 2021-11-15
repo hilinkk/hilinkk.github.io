@@ -22,7 +22,7 @@
 
   
 
-  <title>test1 | Linkk</title>
+  <title>about | Linkk</title>
 
   
 
@@ -43,7 +43,7 @@
   <div class="root-container">
     
 <!-- header container -->
-<header class="header-container post">
+<header class="header-container">
   
     <div class="post-image" style="background-image: url(/image/banner.jpg)"></div>
   
@@ -93,79 +93,37 @@
 
   
   
-    <div class="header-content">
-      <div class="post-text layout-block">
-        <div class="layout-margin">
-          <h1 class="title-wrap">test1</h1>
-          <h2 class="title-sub-wrap">
-            <strong>Linkk</strong>
-            <span>发布于</span>
-            <time  class="article-date" datetime="2021-11-15T09:25:56.000Z" itemprop="datePublished">2021-11-15</time>
-          </h2>
-          <ul class="wrap-list dark">
-  
-    <li><a href="/categories/test/">📒 test</a></li>
-  
-</ul>
-          <ul class="wrap-list dark">
-  
-    <li><a href="/tags/test/">🏷️ test</a></li>
-  
-</ul>
-        </div>
-      </div>
-    </div>
-  
 
   
+  
+    <div class="header-content">
+      <div class="post-text layout-block layout-padding">
+        <h1 class="title-wrap">about</h1>
+        
+      </div>
+    </div>
   
   
 </header>
 
-    <!-- 文章 -->
+    <!-- 分页(其他自定义页面) -->
 
-<!-- 文章内容 -->
+<!-- 自定义页面 -->
+
 <div class="body-container">
   <article class="content-container layout-block post-container">
     <div class="article-info">
       
-      
-      
-      
       <section class="article-entry markdown-body layout-margin content-padding--large soft-size--large soft-style--box">
-        <p>ttt</p>
-<h2 id="图片测试"><a href="#图片测试" class="headerlink" title="图片测试"></a>图片测试</h2><p><img src="/.com//test1.jpg" alt="本地图片"></p>
-
-    <figure class="figure-image">
-      <img src="https://qiniu.sukoshi.xyz/src/images/68686407_p0.jpg" alt="线上图片" loading="lazy">
-      <figcaption>线上图片</figcaption>
-    </figure>
-  
-
-
-
-<h2 id="音乐测试"><a href="#音乐测试" class="headerlink" title="音乐测试"></a>音乐测试</h2><div class="aplayer-box" data-url="https://qiniu.sukoshi.xyz/public/music/鹿乃 - アイロニ.mp3" data-name="アイロニ" data-artist="鹿乃" data-cover="https://qiniu.sukoshi.xyz/public/music/鹿乃 - アイロニ.jpg" data-lrc="https://qiniu.sukoshi.xyz/public/music/鹿乃 - アイロニ.lrc" data-lrctype="3"></div>
-
-
-<h2 id="视频测试"><a href="#视频测试" class="headerlink" title="视频测试"></a>视频测试</h2><iframe height="480" width="700" src="//player.bilibili.com/player.html?aid=463696694&bvid=BV11L411G7he&cid=428659510&page=1" scrolling="no" border="0" frameborder="no" framespacing="0" allowfullscreen="true"> </iframe>
+        <p>不说话，装高手</p>
 
       </section>
 
       
       
 
-      <section class="page-message-container layout-padding">
-        
-
-
-  
-  
-
-  
-  
-
-
-      </section>
+      
+      
     </div>
     <div class="widget-info">
       <section class="widget-author widget-item layout-margin content-padding--primary soft-size--large soft-style--box">
@@ -202,8 +160,6 @@
     </div>
   </div>
 </section>
-
-      
 
       
 <section class="widet-notice widget-item layout-margin content-padding--primary soft-size--large soft-style--box">
@@ -255,6 +211,7 @@
     </div>
   </article>
 </div>
+
 
     <!-- footer container -->
 <footer id="footer" class="footer">
@@ -423,70 +380,7 @@ AAAAAElFTkSuQmCC" />
   <!-- aplayer -->
 
 
-  <!-- aplayer 音频 start -->
-  <link rel="stylesheet" href="https://unpkg.com/aplayer@1.10.1/dist/APlayer.min.css">
-  <script type="text/javascript" src="https://unpkg.com/aplayer@1.10.1/dist/APlayer.min.js"></script>
-  <script type="text/javascript">
-    const aplayer = document.querySelectorAll(".aplayer-box");
-    aplayer && initaplayer(aplayer);
-    function initaplayer(els) {
-      let elsArr = Array.from(els);
-      elsArr.forEach(el => {
-        let params = {
-          container: el,
-          audio: { ...el.dataset },
-          theme: "#b7daff",
-          autoplay: false,
-          loop: false,
-          mutex: true,
-        }
-        if (el.dataset.lrc) {
-          params['lrcType'] = 3
-        }
-        new APlayer(params);
-      });
-    }
-  </script>
-  <!-- aplayer 音频 end -->
-  
-
-
 <!-- dplayer -->
-
-
-<!-- dplayer 视频 start -->
-<script type="text/javascript" src="https://unpkg.com/hls.js@1.0.1/dist/hls.js"></script>
-<script type="text/javascript" src="https://unpkg.com/dplayer@1.25.1/dist/DPlayer.min.js"></script>
-<script type="text/javascript">
-  const dplayer = document.querySelectorAll(".dplayer-box");
-  dplayer && initDPlayer(dplayer);
-  function initDPlayer(els) {
-    let elsArr = Array.from(els);
-    elsArr.forEach(el => {
-      let url = el.dataset.url;
-      let pic = el.dataset.pic;
-      let subtitle = el.dataset.subtitle;
-
-      let options = {
-        container: el,
-        video: { url: url, pic: pic },
-        theme: "#b7daff",
-        autoplay: false,
-        loop: false,
-        mutex: true,
-      }
-
-      if (subtitle) {
-        options.subtitle = {
-          url: el.dataset.subtitle,
-        }
-      }
-      new DPlayer(options);
-    });
-  }
-</script>
-<!-- dplayer 视频 end -->
-
 
 
 
