@@ -22,7 +22,7 @@
 
   
 
-  <title>FastLED学习笔记 | Linkk</title>
+  <title>获取音乐的url | Linkk</title>
 
   
 
@@ -45,7 +45,7 @@
 <!-- header container -->
 <header class="header-container post">
   
-    <div class="post-image" style="background-image: url(/image/img1.jpg)"></div>
+    <div class="post-image" style="background-image: url(/image/img3.png)"></div>
   
 
   <!-- navbar -->
@@ -94,26 +94,20 @@
     <div class="header-content">
       <div class="post-text layout-block">
         <div class="layout-margin">
-          <h1 class="title-wrap">FastLED学习笔记</h1>
+          <h1 class="title-wrap">获取音乐的url</h1>
           <h2 class="title-sub-wrap">
             <strong>Linkk</strong>
             <span>发布于</span>
-            <time  class="article-date" datetime="2021-11-16T12:01:02.000Z" itemprop="datePublished">2021-11-16</time>
+            <time  class="article-date" datetime="2021-11-17T14:53:27.000Z" itemprop="datePublished">2021-11-17</time>
           </h2>
           <ul class="wrap-list dark">
   
-    <li><a href="/categories/%E9%A1%B9%E7%9B%AE%E4%B8%8E%E5%88%B6%E4%BD%9C/">📒 项目与制作</a></li>
-  
-    <li><a href="/categories/%E9%A1%B9%E7%9B%AE%E4%B8%8E%E5%88%B6%E4%BD%9C/%E6%A1%8C%E9%9D%A2%E5%B0%8F%E7%94%B5%E8%84%91-%E5%A4%A9%E6%B0%94%E6%97%B6%E9%92%9F/">📒 桌面小电脑(天气时钟)</a></li>
+    <li><a href="/categories/%E7%AC%94%E8%AE%B0/">📒 笔记</a></li>
   
 </ul>
           <ul class="wrap-list dark">
   
-    <li><a href="/tags/C/">🏷️ C</a></li>
-  
-    <li><a href="/tags/C/">🏷️ C++</a></li>
-  
-    <li><a href="/tags/Arduino/">🏷️ Arduino</a></li>
+    <li><a href="/tags/url/">🏷️ url</a></li>
   
 </ul>
         </div>
@@ -137,19 +131,25 @@
       
       
       <section class="article-entry markdown-body layout-margin content-padding--large soft-size--large soft-style--box">
-        <p>fill_solid(leds, num, color);    //将num个LED设置为color对应的颜色</p>
-<p>CRGB myRGBcolor(50,0,50);    //CRGB::ColorName方法定义颜色 myRGBcolor(红色数值, 绿色数值, 蓝色数值)</p>
-<p>myRGBcolor.r = 100;    //修改红色的数值</p>
-<p>CHSV myHSVcolor(80, 255, 200);    //HSV方法定义颜色  myHSVcolor(色调, 饱和度, 明亮度)</p>
-<p>myHSVcolor.h = 255;    //修改色调</p>
-<p>fill_rainbow(leds,      30,        beginHsv);    </p>
-<p>//fill_rainbow(光带名, 光带数, 开始灯珠的HSV色调);</p>
-<p>fill_rainbow(leds,      30,       beginHsv,             18);    </p>
-<p>//fill_rainbow(光带名, 光带数, 开始灯珠的HSV色调，HSV色调递增值);</p>
-<p>fill_gradient_RGB(leds,      0,              CRGB::Red,      29,              CRGB::Bule);</p>
-<p>//fill_gradient_RGB(光带名, 起始灯珠号, 起始RGB色彩，结束灯珠号，结束RGB色彩);</p>
-<p>fill_gradient(leds,       0,              CHSV(50,255,255),      29,             CHSV(150,255,255),SHORTEST_HUES);</p>
-<p>//fill_gradient(光带名, 起始灯珠号, 起始HSV色彩，        结束灯珠号，结束HSV色彩，选择路径短的（SHORTEST_HUES)/长的（LONGEST_HUES)  );</p>
+        <p>1、首先在浏览器界面右键点击检查，或点F12键。</p>
+<img src="/2021/11/17/%E8%8E%B7%E5%8F%96%E9%9F%B3%E4%B9%90%E7%9A%84url/01.png" alt="01">
+
+
+
+
+
+<p>2、接着选择网络，并按 Ctrl+R 开始记录刷新。</p>
+<p><img src="/2021/11/17/%E8%8E%B7%E5%8F%96%E9%9F%B3%E4%B9%90%E7%9A%84url/02.png" alt="02"></p>
+<p>3、筛选器里面选择媒体，滤掉不需要的信息。</p>
+<p><img src="/2021/11/17/%E8%8E%B7%E5%8F%96%E9%9F%B3%E4%B9%90%E7%9A%84url/03.png" alt="03"></p>
+<p>4、这时候便会出现一个media类型的文件，鼠标左键单击它便会出现歌曲的 url 了。</p>
+<p><img src="/2021/11/17/%E8%8E%B7%E5%8F%96%E9%9F%B3%E4%B9%90%E7%9A%84url/04.png" alt="04"></p>
+<p><img src="/2021/11/17/%E8%8E%B7%E5%8F%96%E9%9F%B3%E4%B9%90%E7%9A%84url/05.png" alt="05"></p>
+<p>最后看看我们的成果</p>
+<div class="aplayer-box" data-url="/music/花败.mp3" data-name="花败" data-artist="旺仔小乔" data-cover="https://y.gtimg.cn/music/photo_new/T002R300x300M000002PZhPS0oOBjt.jpg"></div>
+
+
+
 
       </section>
 
@@ -157,32 +157,16 @@
       
         <nav class="article-nav">
           
-            <div class="article-nav-item layout-padding">
-  <article class="card-container article-nav-card content-padding--primary soft-size--large soft-style--box">
-    
-      <div class="card-cover" background-image-lazy data-img="/image/img3.png"></div>
-    
-    <div class="card-text">
-      
-        <a href="/2021/11/17/%E8%8E%B7%E5%8F%96%E9%9F%B3%E4%B9%90%E7%9A%84url/" itemprop="url">
-          <h2 class="card-text--title text-ellipsis">获取音乐的url</h2>
-        </a>
-      
-      <div class="card-text--row">Newer</div>
-    </div>
-  </article>
-</div>
-          
           
             <div class="article-nav-item layout-padding">
   <article class="card-container article-nav-card content-padding--primary soft-size--large soft-style--box">
     
-      <div class="card-cover" background-image-lazy data-img="/image/img2.png"></div>
+      <div class="card-cover" background-image-lazy data-img="/image/img1.jpg"></div>
     
     <div class="card-text">
       
-        <a href="/2021/11/16/%E5%AD%A6%E4%B9%A0%E8%B5%84%E6%96%99%E6%B1%87%E6%80%BB/" itemprop="url">
-          <h2 class="card-text--title text-ellipsis">学习资料汇总</h2>
+        <a href="/2021/11/16/FastLED%E5%AD%A6%E4%B9%A0%E7%AC%94%E8%AE%B0/" itemprop="url">
+          <h2 class="card-text--title text-ellipsis">FastLED学习笔记</h2>
         </a>
       
       <div class="card-text--row">Older</div>
